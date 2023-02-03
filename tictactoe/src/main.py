@@ -1,4 +1,33 @@
-## Board functions ##
+
+### Main Script ###
+
+def main():
+    
+    print("This is a 2-player tic-tac-toe game.")
+
+    # Get player names
+    print("Enter the name of player 1:")
+    p1 = input()
+    print("\nEnter the name of player 2:")
+    p2 = input()
+    print("\n" + p1 + " will be \"X\" and " + p2 + " will be \"O\"\n")
+
+    # Find and print winner
+    winner = playGame(p1, p2)
+    printWinner(winner)
+
+    # Ask if players want to play again
+    playAgain()
+
+
+### Board vars/functions ###
+
+# 1 | 2 | 3 
+# --+---+--
+# 4 | 5 | 6
+# --+---+--
+# 7 | 8 | 9
+
 boardLegend = {
     "1" : "1", "2" : "2", "3" : "3",
     "4" : "4", "5" : "5", "6" : "6",
@@ -21,45 +50,49 @@ def printBoard(board):
     print()
 
 
-## Main Game Functions ##
+### Main Functions ###
 
-# Play the main game
+## Play the game
 def playGame(p1, p2):
 
-    # Players take turns to play
+    # Set up game
     activeBoard = dict(defaultBoard)
-    turn = 1
     print("Board legend: ")
     printBoard(boardLegend)
     printBoard(activeBoard)
+
+    player1 = [p1, "X"]
+    player2 = [p2, "O"]
+    turn = 1
+
     while (turn < 10):
 
         #p1 plays on odd turns
         if (turn % 2 != 0):
-            playerTurn(activeBoard, p1, "X") 
+            playerTurn(activeBoard, player1) 
             space = checkForWinner(activeBoard, turn)
             if (space != -1):
-                return p1
+                return player1[0]
         #p2 plays on even turns
         else:
-            playerTurn(activeBoard, p2, "O")
+            playerTurn(activeBoard, player2)
             space = checkForWinner(activeBoard, turn)
             if (space != -1):
-                return p2
+                return player2[0]
 
         turn += 1
     
     # Case of no winner
     return "none"
 
-# Print the winner of the game
+## Print the winner of the game
 def printWinner(p):
     if (p == "none"):
         print("It's a draw! Nobody won this round of tic-tac-toe.")
     else:
         print("Congratulations " + p + ", you won this game!")
 
-#See if player wants to play again
+## Ask if player wants to play again
 def playAgain():
     print("Would you like to play again? (yes/no)")
     answer = input()
@@ -73,63 +106,49 @@ def playAgain():
         playAgain()
 
 
-## Helper functions ##
+### Helper functions ###
 
-def playerTurn(board, p, mark):
-    print("It's " + p + "'s turn. Choose a space (1-9) to occupy on the board: ")
-    chooseSpace(board, p, mark)
+## Player's turn to put X or O on the board
+def playerTurn(board, player):
+    print("It's " + player[0] + "'s turn. Choose a space (1-9) to occupy on the board: ")
+    chooseSpace(board, player)
     printBoard(board)
 
-def chooseSpace(board, p, mark):
-    text = "\n" + p + ", choose an empty space from 1-9 inclusive.\n(Type \"peek\" to see the board)"
+## Player chooses a space on the board
+def chooseSpace(board, player):
+    text = "\n" + player[0] + ", choose an empty space from 1-9 inclusive.\n(Type \"peek\" to see the board)"
     a = input()
     if a == "peek":
         printBoard(board)
         print(text)
-        chooseSpace(board, p, mark)
+        chooseSpace(board, player)
     elif (a in board):
-        if board[a] ==  ' ': board[a] = mark
+        if board[a] ==  ' ': board[a] = player[1]
         else:
             print("\nSpace already taken. " + text)
-            chooseSpace(board, p, mark)
+            chooseSpace(board, player)
     else:
         print("\nInvalid space entered. " + text)
-        chooseSpace(board, p, mark)
+        chooseSpace(board, player)
 
+## Check for winner
 def checkForWinner(board, turn):
     space = -1
     if (turn > 2):
-        if ((board["1"] == board["5"] == board["9"]) or
-        (board["3"] == board["5"] == board["7"]) or
-        (board["4"] == board["5"] == board["6"]) or
-        (board["2"] == board["5"] == board["8"])) and (board["5"] != ' '):
+        if ((board["5"] != ' ') and
+        (board["1"] == board["5"] == board["9"]) or (board["3"] == board["5"] == board["7"]) or
+        (board["4"] == board["5"] == board["6"]) or (board["2"] == board["5"] == board["8"])):
             space = 5
-        elif ((board["1"] == board["4"] == board["7"]) or
-        (board["1"] == board["2"] == board["3"])) and (board["1"] != ' '):
+        elif ((board["1"] != ' ') and 
+        (board["1"] == board["4"] == board["7"]) or (board["1"] == board["2"] == board["3"])):
             space = 1
-        elif ((board["3"] == board["6"] == board["9"]) or
-        (board["7"] == board["8"] == board["9"])) and (board["9"] != ' '):
+        elif ((board["9"] != ' ') and
+        (board["3"] == board["6"] == board["9"]) or (board["7"] == board["8"] == board["9"])):
             space = 9
-    # If no current winner, return -1
+    # If no winner (yet), return -1
     return space
 
 
-## Main Script ##
-
-def main():
-    print("This is a 2-player tic-tac-toe game.")
-
-    # Get player names
-    print("Enter the name of player 1:")
-    p1 = input()
-    print("\nEnter the name of player 2:")
-    p2 = input()
-    print("\n" + p1 + " will be \"X\" and " + p2 + " will be \"O\"\n")
-
-    winner = playGame(p1, p2)
-    printWinner(winner)
-    playAgain()
-
-
-## Run main script ##
-main()
+### Run main script ###
+if __name__ == "__main__":
+    main()
