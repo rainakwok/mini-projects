@@ -52,7 +52,7 @@ def printBoard(board):
 
 ### Main Functions ###
 
-## Play the game
+## Play the game ##
 def playGame(p1, p2):
 
     # Set up game
