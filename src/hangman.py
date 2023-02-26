@@ -47,7 +47,7 @@ def hangman(phrase):
                or ((len(guess) != 1) and (len(guess) != len(phrase)))):
             # Inform player of invalid input. Let host input another phrase or end the game
             print("Invalid input.")
-            print("Please enter a new, alphabetical letter or guess the entire phrase: ", end="")
+            print("Please enter a new, alphabetical letter or guess the exact phrase (include punctuation): ", end="")
             guess = input().lower().strip()
 
         # If user guessed the exact phrase (instead of a letter), break out of loop
