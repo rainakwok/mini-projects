@@ -10,5 +10,5 @@ This is a basic 2-player tic-tac-toe game.
 
 ### 2. Hangman
 This is a simple game of hangman.
-- Setup command: 
-- Run command: 
+- Setup command: N/A
+- Run command: Go to src/hangman.py. Press the 'run' button
