@@ -38,30 +38,40 @@ def hangman(phrase):
     while (mistakes < 6):
 
         # Ask user to guess a letter
-        print("Guess a letter: ", end="")
-        guess = input().lower()
+        print("Guess a letter or the entire phrase: ", end="")
+        guess = input().lower().strip()
 
-        # Ensure valid input
-        while ((len(guess) != 1) or not guess.isalpha()):
+        # Ensure valid input (alphabetical string, new letter is guessed, and either 1 letter or same length as phrase)
+        while ((len(guess) == 1 and not guess.isalpha())
+               or (guess in correctL or guess in incorrectL)
+               or ((len(guess) != 1) and (len(guess) != len(phrase)))):
             # Inform player of invalid input. Let host input another phrase or end the game
-            print("Invalid input.\nPlease enter an alphabetical letter: ", end="")
-            guess = input()
-        
-        # Ensure a new letter was guessed
-        while (guess in correctL or guess in incorrectL):
-            # Inform player of invalid input. Let host input another phrase or end the game
-            print("\nYou've already guessed this letter.\nPlease guess a new letter: ", end="")
-            guess = input()
+            print("Invalid input.")
+            print("Please enter a new, alphabetical letter or guess the entire phrase: ", end="")
+            guess = input().lower().strip()
+
+        # If user guessed the exact phrase (instead of a letter), break out of loop
+        if (guess == phrase):
+            correctL.append(guess)
+            for k in range(len(phrase)):
+                board[k] = phrase[k]
+            
+            # Print hangman, guesses, and board
+            drawHangman(mistakes)
+            printGuesses(correctL, incorrectL)
+            print("Board: " + " ".join(board) + "\n")
+            print("\nSensational!")
+            break
 
         print("\n\n\n")
 
-        # Replace underscore with letter if user guesses correctly
+        # Replace underscore with letter if user guesses a letter correctly
         if (guess in letters):
             for j in range(len(letters)):
                 if (letters[j] == guess):
                     board[j] = letters[j]
             correctL.append(guess)
-            print("\nGreat guess! The letter " + guess + " exists in the unknown word or phrase.")
+            print("\nGreat guess! The letter \'" + guess + "\' exists in the unknown word or phrase.")
         # Otherwise, 'draw a part of the hangman' if user guesses incorrectly
         else:
             incorrectL.append(guess)
@@ -79,7 +89,7 @@ def hangman(phrase):
 
     # Print win/lose message
     if (mistakes < 6):
-        print("Congratulations on guessing the phrase with less than 6 mistakes. You win!\n")
+        print("Congratulations on guessing the phrase \"" + phrase + "\" with less than 6 mistakes. You win!\n")
     else:
         print("You made 6 mistakes. You lose :(")
         print("The correct word or phrase was \"" + phrase + "\"\n")
