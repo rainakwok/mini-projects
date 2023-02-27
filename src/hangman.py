@@ -110,7 +110,7 @@ def printGuesses(correct, incorrect):
 # Print a drawing of the hangman
 def drawHangman(stage):
     stand = "|\n"
-    emptyTop = "______\n|    |\n|    A"
+    emptyTop = "______\n|    |\n|    ^"
     head  = "| (x - x)"
     neck = "|    |"
     arm1 = "| \__|"
