@@ -47,7 +47,8 @@ def hangman(phrase):
                or ((len(guess) != 1) and (len(guess) != len(phrase)))):
             # Inform player of invalid input. Let host input another phrase or end the game
             print("Invalid input.")
-            print("Please enter a new, alphabetical letter or guess the exact phrase (include punctuation): ", end="")
+            print("Please enter a new, alphabetical letter or guess the exact phrase (include punctuation): ",
+                  end="")
             guess = input().lower().strip()
 
         # If user guessed the exact phrase (instead of a letter), break out of loop
@@ -63,20 +64,18 @@ def hangman(phrase):
             print("\nSensational!")
             break
 
-        print("\n\n\n")
-
         # Replace underscore with letter if user guesses a letter correctly
         if (guess in letters):
             for j in range(len(letters)):
                 if (letters[j] == guess):
                     board[j] = letters[j]
             correctL.append(guess)
-            print("\nGreat guess! The letter \'" + guess + "\' exists in the unknown word or phrase.")
+            print("\n\n\n\nGreat guess! The letter \'" + guess + "\' exists in the mystery word or phrase.")
         # Otherwise, 'draw a part of the hangman' if user guesses incorrectly
         else:
             incorrectL.append(guess)
             mistakes += 1
-            print("\nUnfortunately, the letter \'" + guess + "\' does not exist in the word or phrase.")
+            print("\nUnfortunately, the letter \'" + guess + "\' does not exist in the mystery word or phrase.")
         
         # Print hangman, guesses, and board
         drawHangman(mistakes)
@@ -89,10 +88,10 @@ def hangman(phrase):
 
     # Print win/lose message
     if (mistakes < 6):
-        print("Congratulations on guessing the phrase \"" + phrase + "\" with less than 6 mistakes. You win!\n")
+        print("Congratulations on guessing the mystery word or phrase \"" + phrase + "\" with less than 6 mistakes. You win!\n")
     else:
         print("You made 6 mistakes. You lose :(")
-        print("The correct word or phrase was \"" + phrase + "\"\n")
+        print("The mystery word or phrase was \"" + phrase + "\"\n")
 
 
 # Print the correct and incorrect guesses
@@ -119,10 +118,8 @@ def drawHangman(stage):
     leg1 = "|   /\n| _/"
     leg2 = "|   / \\\n| _/   \\_"
 
-    if (stage == 0):
-        print(emptyTop)
-    else:
-        print(emptyTop)
+    print(emptyTop)
+    if (stage != 0):
         print(head)
         if (stage == 2):
             print(neck)
@@ -163,7 +160,7 @@ while (len(phrase) == 0 or (phrase.count("_") != 0)):
 
     # If host types "STOP!", stop the game
     if (phrase == "STOP!"):
-        sys.exit("\nHangman game stopped.")
+        sys.exit("\nHangman game stopped.\n")
 
 # Trim any leading or trailing whitespaces
 phrase = phrase.strip().lower()
