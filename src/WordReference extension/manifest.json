@@ -1,0 +1,16 @@
+{
+    "name": "WordReference Lookup",
+    "description": "A Google Chrome extension to look up words in WordReference",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "logo_WordRef": "/assets/icons/WordRef-logo.png"
+    },
+
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "logo_WordRef": "/assets/icons/WordRef-logo.png"
+        }
+    }
+}

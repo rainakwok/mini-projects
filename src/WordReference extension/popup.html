@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="assets/css/popup.css">
+  </head>
+  <body>
+   <div id="wordref-wrapper">
+    <div id="wordref-header">
+      <h1>WordReference Lookup</h1>
+    </div>
+    <div id="container">
+      <div class="wordref-form">
+        <h2>Saved Dictionaries</h2>
+        <ul class="list" id="dictionaryList">
+          <li class="dictionary-item" id="dictionary-EnFr" value="EnFr">
+            <label for="dictionary-EnFr">English-French</label>
+          </li>
+          <li class="dictionary-item" id="dictionary-FrEn" value="FrEn">
+            <label for="dictionary-FrEn">French-English</label>
+          </li>
+          <li class="dictionary-item" id="dictionary-EnEs" value="EnEs">
+            <label for="dictionary-EnEs">English-Spanish</label>
+          </li>
+          <li class="dictionary-item" id="dictionary-EsEn" value="EsEn">
+            <label for="dictionary-EsEn">Spanish-English</label>
+          </li>
+        </ul>
+        <!-- <label for="text">English </label>
+        <textarea name="text" id="translation-from" placeholder="Word to translate"></textarea><br>
+        <label for="text">French </label>
+        <textarea name="text" id="translation-from" placeholder="Word to translate to"></textarea><br><br> -->
+      </div>
+      <div class=wordref-buttons>
+        <!-- <p>Total: <span id="notify-count"></span></p> -->
+        <button class="button primary" id="wordref-addDict">
+          Add a dictionary
+        </button>
+      </div>
+    </div>
+   </div>
+   <script src="assets/js/popup.js"></script>
+  </body>
+</html>
