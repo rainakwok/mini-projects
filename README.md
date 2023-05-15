@@ -12,3 +12,6 @@ This is a basic 2-player tic-tac-toe game.
 This is a simple game of hangman.
 - Setup command: N/A
 - Run command: Go to src/hangman.py. Press the 'run' button
+
+### 3. WordReference Extension (INCOMPLETE)
+This is a WordReference Chrome Extension.
