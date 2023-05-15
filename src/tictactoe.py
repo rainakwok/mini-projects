@@ -59,6 +59,7 @@ def playGame(p1, p2):
     activeBoard = dict(defaultBoard)
     print("Board legend: ")
     printBoard(boardLegend)
+    print("Current Board: ")
     printBoard(activeBoard)
 
     player1 = [p1, "X"]

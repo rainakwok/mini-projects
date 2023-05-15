@@ -24,7 +24,6 @@ def hangman(phrase):
                 board += [ltr]
         
         # Add a space between each word
-        index = words.index(w)
         if (count < len(words)):
             board += [" "]
             count += 1
@@ -75,7 +74,7 @@ def hangman(phrase):
         else:
             incorrectL.append(guess)
             mistakes += 1
-            print("\nUnfortunately, the letter \'" + guess + "\' does not exist in the mystery word or phrase.")
+            print("\n\n\nUnfortunately, the letter \'" + guess + "\' does not exist in the mystery word or phrase.")
         
         # Print hangman, guesses, and board
         drawHangman(mistakes)
@@ -149,7 +148,7 @@ def drawHangman(stage):
 print("\nLet's play Hangman!\n")
 print("The goal of the game is to guess the word or phrase correctly. You can only guess one letter each time.")
 print("If you make more than 6 mistakes, it's game over!\nReady?\n")
-print("All players, cover your eyes.\nHost, please type in your secret word or phrase: ", end="")
+print("All players, close your eyes.\nHost, please type in your secret word or phrase: ", end="")
 phrase = input()
 
 # Check for valid input.
