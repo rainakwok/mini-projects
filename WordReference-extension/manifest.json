@@ -1,0 +1,26 @@
+{
+    "name": "WordReference Lookup",
+    "description": "A Google Chrome extension to look up words in WordReference",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "logo_WordRef": "/assets/icons/WordRef-logo.png"
+    },
+    "permissions": ["activeTab", "declarativeContent",
+             "storage", "tabs", "https://www.wordreference.com/*"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "externally_connectable": {
+        "matches": ["*://*.wordreference.com/*"]
+    },
+    "author": "Raina Kwok",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "logo_WordRef": "/assets/icons/WordRef-logo.png"
+        },
+        "default_title": "WordReference Word Lookup"
+    }
+}

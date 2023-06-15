@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="WordReference Lookup Chrome Extension">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" href="assets/css/popup.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>WordReference Word Lookup</title>
+
+  </head>
+  <body>
+   <div id="wordref-wrapper">
+    <div id="wordref-header">
+      <h1>WordReference Quick Lookup</h1>
+    </div>
+    <hr/>
+    <div id="container">
+      <div class="wordref-form">
+        <h6>Dictionary: </h6>
+        <select name="dictionaries" id="dictionaries">
+          <option id="en-fr" selected="selected">English-French</option>
+          <option id="fr-en">French-English</option>
+          <option id="en-es">English-Spanish</option>
+          <option id="es-en">Spanish-English</option>
+        </select>
+        <h6><br>Lookup word:</h6>
+        <input type="text" id="searchInput"/>
+        <button id="translateButton" type="button" onclick="updateSearchVal();">Translate</button>
+        <p>
+          See more translations at 
+          <a id="wordref-hyperlink" href="https://www.wordreference.com/" target="_blank">WordReference.com</a>
+        </p>
+      </div> 
+      <hr/>
+      <div id="translationInfo">
+        <h5 id="searchedWord"></h5>
+        <div class="row">
+          <div id="fromTranslation" class="column"></div>
+            <h6 id="fromWord"></h6>
+            <p class="info"></p>
+          <div id="toTranslation" class="column">
+            <h6 id="toWord"></h6>
+            <p class="info"></p>
+          </div>
+        </div>
+      </div>
+      <script>
+        function updateSearchVal(){
+            // Selecting the input element and get its value 
+            var searchVal = document.getElementById("searchInput").value;
+            alert(searchVal);
+            document.getElementById("searchedWord").innerHTML = searchVal;
+        }
+      </script>
+      <!-- <hr />
+      <div id="translationHistory">
+        <p>Translation History</p>
+
+          <ul id="history_list">
+            <li><span id="ts">xx:xx</span>
+            <span id="note">example desc</span></li>
+            <li><span id="ts">xx:xx</span>
+            <span id="note">example desc</span>
+            </li><li><span id="ts">xx:xx</span>
+            <span id="note">example desc</span></li>
+          </ul>
+          
+      </div> -->
+    </div>
+   </div>
+  <!-- <script src="assets/js/popup.js"></script> -->
+  </body>
+</html>
