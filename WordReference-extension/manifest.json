@@ -6,11 +6,19 @@
     "icons": {
         "logo_WordRef": "/assets/icons/WordRef-logo.png"
     },
-    "permissions": ["activeTab", "declarativeContent",
-             "storage", "tabs", "https://www.wordreference.com/*"],
+
+    "permissions": [
+        "activeTab",
+        "declarativeContent",
+        "storage",
+        "tabs"],
+    "host_permissions": [
+        "https://www.wordreference.com/*"
+    ],
+    "optional_host_permissions": [],
+
     "background": {
-        "scripts": ["background.js"],
-        "persistent": false
+        "service_worker": "background.js"
     },
     "externally_connectable": {
         "matches": ["*://*.wordreference.com/*"]
