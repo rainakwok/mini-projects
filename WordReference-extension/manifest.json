@@ -4,7 +4,7 @@
     "version": "1.0",
     "manifest_version": 3,
     "icons": {
-        "logo_WordRef": "/assets/icons/WordRef-logo.png"
+        "16": "/assets/icons/WordRef-logo.jpg"
     },
 
     "permissions": [
@@ -27,7 +27,7 @@
     "action": {
         "default_popup": "index.html",
         "default_icon": {
-            "logo_WordRef": "/assets/icons/WordRef-logo.png"
+            "16": "/assets/icons/WordRef-logo.jpg"
         },
         "default_title": "WordReference Word Lookup"
     }
