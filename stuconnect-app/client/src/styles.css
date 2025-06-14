@@ -1,0 +1,79 @@
+/* Define variables */
+/* --brandColour_main: #1B08FF;
+--brandColour_secondary: #160B9B;
+--brandColour_light: #F2F6FF; */
+
+.brandColour-bg {
+  background-color: #F2F6FF; /*brandColour_light*/
+}
+
+.activePage-theme {
+  background-color: #1B08FF; /*brandColour_main*/
+  color: white;
+}
+
+/* Fonts */
+.quicksand-brand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+}
+
+/* Google Button */
+.google-sign-in-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-sign-in-button:hover {
+  background-color: #f1f3f4;
+}
+
+.google-icon-wrapper {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.google-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.button-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3c4043;
+}
+
+.link-btn {
+  background: none;
+  color: #ef07d4;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  border: none;
+}
+.link-btn:hover {
+  text-decoration: underline;
+}
+
+.forgot-link-btn {
+  background: none;
+  color: blue;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  border: none;
+}
+
+.forgot-link-btn:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,65 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.profile-page {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #cac7eb;
+}
+
+.profile-page h2 {
+  font-family: 'Droid Sans', 'Chilanka';
+  font-size: 30px;
+}
+
+.error-message {
+  color: red;
+  font-size: 13.5px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+/*  
+.inputFormField2 {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;  
+  width: 100;
+} */
+ 
+.inputFormField2 Button {
+  margin: 0;
+}
+
+
+.inputFormField2 {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  max-width: 600px;  
+  width: 100%; 
+  margin-left: auto;  
+  margin-right: auto; 
+}
+ @media (max-width:800px) {
+  .Paper {
+    padding: 2rem;
+    margin: 1rem;
+    max-width: 95%; 
+  }
+  .inputFormField2 Button {
+    margin: 0;
+  }
+  
+  .profile-page h2 {
+    font-size: 28px;
+  }
+
+  .inputFormField2 h2 {
+    font-size: 28px;
+  }
+  
+}

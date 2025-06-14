@@ -1,0 +1,114 @@
+
+.header-container {
+    background-color: #fff;
+    padding: 65px;  
+    margin: 0px 0;
+    border: 2px  black;  
+    border-radius: 1px;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    height: 30px;  
+    box-sizing: border-box;  
+  }
+  
+  .header-logo {
+    position: relative;  
+    height: auto; 
+  }
+  
+  .home-header {
+    color:  rgb(5, 5, 208);
+    font-size: 2.5rem;  
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+    margin-top: -40px; 
+    
+  }
+  .header-subtext {
+    color:  rgb(5, 5, 208);
+    font-size: 1.2rem; 
+    margin-top: 2px;  
+    font-weight: normal; 
+    font-family:'Varela Round', sans-serif;
+  }
+ 
+  
+  .auth-links, .auth-buttons {
+    text-align: right;
+    margin-top: -50px;
+  }
+  
+  .auth-link, .auth-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: rgb(5, 5, 208);
+    border: 1px  white;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+  }
+  .auth-button {
+    background-color: transparent;
+  }
+  .big-picture-container {
+    width: 1000%;  
+    text-align: center;
+    padding: 0;  
+    margin: 0;  
+  }
+  .quicksand-brand{
+    font-size: 25px;
+  }
+  
+  
+  .big-picture {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;  
+    height: auto;  
+    z-index: -1; 
+  }
+  .profile-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: rgb(5, 5, 208);
+    border: 1px  white;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1rem;
+    font-family: 'Varela Round', sans-serif;
+}
+.me-button {
+  background-color: #cac7eb;
+  color: #000000;
+}
+.name-brand {
+  font-size: 1em; 
+ 
+}
+.name-brand Button{
+  font-size: 1em;  
+ 
+}
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
