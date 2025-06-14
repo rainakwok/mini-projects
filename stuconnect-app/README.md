@@ -1,4 +1,5 @@
 # StuConnect
+Team 13: Ali Al-Rady, Raina Kwok, Kripa Pokhrel
 
 ## Project Description
 StuConnect is a student networking platform designed to facilitate meaningful professional connections among students, professionals, mentors, and potential employers. Unlike conventional networking platforms, StuConnect emphasizes instant connections based on user-provided information such as interests, goals, and future aspirations during account creation. The platform aims to streamline the networking process, eliminate cluttered message inboxes, and provide users with a direct and prompt means of communication.
