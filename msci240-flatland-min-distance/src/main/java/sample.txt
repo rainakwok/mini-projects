@@ -1,0 +1,30 @@
+11
+Unity
+Biggar
+Saskatoon
+Kindersley
+Rosetown
+Leader
+MapleCreek
+SwiftCurrent
+Robsart
+Eastend
+Cadillac
+15
+Unity Biggar 103
+Biggar Saskatoon 97.3
+Unity Kindersley 115
+Biggar Rosetown 58.5
+Saskatoon Rosetown 119
+Kindersley Rosetown 84.2
+Kindersley Leader 85.7
+Rosetown SwiftCurrent 155
+Leader SwiftCurrent 154
+Leader MapleCreek 112
+SwiftCurrent MapleCreek 137
+MapleCreek Robsart 71
+Robsart Eastend 47.5
+SwiftCurrent Cadillac 65.1
+Cadillac Eastend 91.8
+1
+Saskatoon Robsart

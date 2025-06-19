@@ -1,0 +1,16 @@
+5
+Vancouver
+Toronto
+Montreal
+Kelowna
+Abbotsford
+6
+Vancouver Toronto 12
+Vancouver Kelowna 7
+Toronto Kelowna 4
+Toronto Abbotsford 3
+Kelowna Abbotsford 8
+Kelowna Montreal 3
+2
+Vancouver Abbotsford
+Toronto Vancouver
